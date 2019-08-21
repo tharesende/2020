@@ -17,9 +17,9 @@ time_till = time.mktime(datetime.now().timetuple())
 time_from = time_till - 60  * 10 # 10 Minuto
 
 #urllib3.disable_warnings()
-zabbix = ZabbixAPI("http://189.91.0.39/zabbix/")
+zabbix = ZabbixAPI("http://192.168.0.117/zabbix/")
 zabbix.session.verify=False
-zabbix.login("artistasdamonitoracao", "Newpwd1mbr4tux.")
+zabbix.login("Admin", "zabbix")
 #print("Connected to Zabbix API Version %s" % zabbix.api_version())
 pons = []
 res = []
@@ -38,7 +38,7 @@ def get_items():
         filter_item(item)
     pons_counted = Counter(pons)
 zabbix.session.verify=False
-zabbix.login("artistasdamonitoracao", "Newpwd1mbr4tux.")
+zabbix.login("Admin", "zabbix")
 #print("Connected to Zabbix API Version %s" % zabbix.api_version())
 pons = []
 res = []
