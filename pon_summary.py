@@ -21,7 +21,7 @@ time_from = time_till - 60  * 10 # 10 Minuto
 #urllib3.disable_warnings()
 zabbix = ZabbixAPI("http://189.91.0.38/zabbix/")
 zabbix.session.verify=False
-zabbix.login("Admin", "zabbix")
+zabbix.login("thales", "zabbixmasterdvl")
 #print("Connected to Zabbix API Version %s" % zabbix.api_version())
 pons = []
 res = []
@@ -41,7 +41,7 @@ def get_items():
 #urllib3.disable_warnings()
 zabbix = ZabbixAPI("http://189.91.0.38/zabbix/")
 zabbix.session.verify=False
-zabbix.login("Admin", "zabbix")
+zabbix.login("thales", "zabbixmasterdvl")
 #print("Connected to Zabbix API Version %s" % zabbix.api_version())
 pons = []
 res = []
